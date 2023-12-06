@@ -39,11 +39,11 @@ void PromptForAddress(tutorial::Person* person) {
         string type;
         getline(cin, type);
         if (type == "mobile") {
-            phone_number->set_type(tutorial::Person::MOBILE);
+            phone_number->set_type(tutorial::Person::PHONE_TYPE_MOBILE);
         } else if (type == "home") {
-            phone_number->set_type(tutorial::Person::HOME);
+            phone_number->set_type(tutorial::Person::PHONE_TYPE_HOME);
         } else if (type == "work") {
-            phone_number->set_type(tutorial::Person::WORK);
+            phone_number->set_type(tutorial::Person::PHONE_TYPE_WORK);
         } else {
             cout << "Unknown phone type. Using default." << endl;
         }

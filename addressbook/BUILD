@@ -4,13 +4,13 @@ proto_library(
 )
 
 cc_binary(
-    name = 'write',
-    srcs = 'write.cpp',
+    name = 'add_person',
+    srcs = 'add_person.cc',
     deps = ':addressbook_proto',
 )
 
 cc_binary(
-    name = 'read',
-    srcs = 'read.cpp',
+    name = 'list_people',
+    srcs = 'list_people.cc',
     deps = ':addressbook_proto',
 )
