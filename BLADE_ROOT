@@ -1,4 +1,9 @@
+java_binary_config(
+    one_jar_boot_jar = 'thirdparty/one-jar/one-jar-boot-0.97.jar'
+)
+
 proto_library_config(
     protoc = 'protoc',
     protobuf_libs = ['#protobuf', '#pthread'],
+    protobuf_java_libs = ['//thirdparty/protobuf:protobuf-java'],
 )
