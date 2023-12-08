@@ -17,7 +17,7 @@ public class AddPerson {
     static Person PromptForAddress(BufferedReader stdin, PrintStream stdout) throws IOException {
         Person.Builder person = Person.newBuilder();
 
-        stdout.print("Enter person ID: ");
+        stdout.print("Enter person ID number: ");
         person.setId(Integer.valueOf(stdin.readLine()));
 
         stdout.print("Enter name: ");

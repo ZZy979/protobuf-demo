@@ -8,18 +8,14 @@ using namespace std;
 
 // Iterates though all people in the AddressBook and prints info about them.
 void ListPeople(const tutorial::AddressBook& address_book) {
-    for (int i = 0; i < address_book.people_size(); i++) {
-        const tutorial::Person& person = address_book.people(i);
-
+    for (const auto& person : address_book.people()) {
         cout << "Person ID: " << person.id() << endl;
         cout << "  Name: " << person.name() << endl;
         if (person.has_email()) {
             cout << "  E-mail address: " << person.email() << endl;
         }
 
-        for (int j = 0; j < person.phones_size(); j++) {
-            const tutorial::Person::PhoneNumber& phone_number = person.phones(j);
-
+        for (const auto& phone_number : person.phones()) {
             switch (phone_number.type()) {
                 case tutorial::Person::PHONE_TYPE_MOBILE:
                     cout << "  Mobile phone #: ";
@@ -40,7 +36,7 @@ void ListPeople(const tutorial::AddressBook& address_book) {
 }
 
 // Main function:  Reads the entire address book from a file and prints all
-//   the information inside.
+// the information inside.
 int main(int argc, char* argv[]) {
     // Verify that the version of the library that we linked against is
     // compatible with the version of the headers we compiled against.
