@@ -4,3 +4,9 @@ proto_library(
     deps = '//foo:foo_proto',
     visibility = ['PUBLIC'],
 )
+
+cc_binary(
+    name = 'mutable_caution',
+    srcs = 'mutable_caution.cpp',
+    deps = ':bar_proto',
+)

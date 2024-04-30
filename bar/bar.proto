@@ -1,9 +1,10 @@
 syntax = "proto2";
 
-package foo;
+package bar;
 
 import "foo/foo.proto";
 
 message Bar {
-  optional foo.Foo f = 1;
+  optional foo.Foo foo = 1;
+  optional int32 y = 2;
 }
