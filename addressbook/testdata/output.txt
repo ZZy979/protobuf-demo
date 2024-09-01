@@ -1,0 +1,10 @@
+Person ID: 1
+  Name: Alice
+  E-mail address: alice@example.com
+  Mobile phone #: 1234
+  Work phone #: 5678
+Person ID: 2
+  Name: Bob
+  E-mail address: bob@example.com
+  Home phone #: 4321
+  Work phone #: 8765

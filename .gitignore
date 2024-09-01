@@ -17,3 +17,6 @@
 /.Building.lock
 /.blade.test.stamp
 /BLADE_ROOT.local
+
+# CMake
+/cmake-build*/
